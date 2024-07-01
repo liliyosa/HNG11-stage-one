@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Goals Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 data-testid="slackDisplayName">Liliyosa Mbakureya</h1>
+  </header>
+  <nav>
+    <a href="#about" data-testid="hngLink">HNG</a>
+    <a href="#goals" data-testid="keywordLink">Keyword</a>
+    <a href="#contact" data-testid="scrapeanywebLink">Scrapeanyweb</a>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="slackpic.jpg" alt="Profile Picture" data-testid="slackProfilePicture"  >
+      <p>My name is <span data-testid="slackDisplayName">Liliyosa Mbakureya</span>, and I'm a passionate tech enthusiast. I'm currently working towards achieving my goals in the tech field over the next 2 years.</p>
+      <p>You can reach me at <span data-testid="slackEmail">liliyosambakureya@gmail.com</span>.</p>
+      <p>The current time in UTC is <span data-testid="currentTimeUTC">2024-07-01 00:00:00</span>, and today is <span data-testid="currentDay">Saturday</span>.</p>
+    </section>
+    <section id="goals">
+      <h2>My Tech Goals</h2>
+      <ul>
+        <li>Become proficient in HTML, CSS, and JavaScript</li>
+        <li>Learn a modern JavaScript framework like React or Angular</li>
+        <li>Develop a portfolio of projects to showcase my skills</li>
+        <li>Contribute to open-source projects and build a strong network in the tech community</li>
+        <li>Explore opportunities for internships or entry-level positions in the tech industry</li>
+      </ul>
+    </section>
+    
+  </main>
+  <footer>
+    <p>&copy; 2024 Tech Goals Portfolio. All rights reserved.</p>
+  </footer>
+  <script>
+    // Add your JavaScript code here
+    const currentTimeUTC = document.querySelector('[data-testid="currentTimeUTC"]');
+    currentTimeUTC.textContent = new Date().toISOString();
+
+    const currentDay = document.querySelector('[data-testid="currentDay"]');
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    currentDay.textContent = daysOfWeek[new Date().getDay()];
+  </script>
+</body>
+</html>
